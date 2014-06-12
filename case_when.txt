@@ -1,11 +1,98 @@
+Nomenklatur
+-----------
+
+
+
+
+Rohrl Text
+---------
+
 CASE 
-WHEN $scale < 750 THEN 0.28
-WHEN $scale >= 750 AND $scale < 1250 THEN 0.2
-WHEN $scale >= 1250 AND $scale < 3000 THEN 0.14
-WHEN $scale >= 3000 AND $scale < 6000 THEN 0.1
-ELSE 0.2 END
+WHEN $scale < 750 THEN 11.2
+WHEN $scale >= 750 AND $scale < 1250 THEN 8
+WHEN $scale >= 1250 AND $scale < 3000 THEN 5.6
+WHEN $scale >= 3000 THEN 4.4
+END
 
 
+EO Text:
+--------
+
+dito BB
+
+
+EO Punkt:
+--------
+
+Bildstock, Kruzifix / Denkmal, Mast_Antenne, Quelle:
+
+CASE 
+WHEN $scale < 750 THEN 125
+WHEN $scale >= 750 AND $scale < 1250 THEN 64
+WHEN $scale >= 1250 AND $scale < 3000 THEN 32
+WHEN $scale >= 3000 THEN 16
+END
+
+Fels, Grotte_Höhleneingang, wichtiger Einzelbaum:
+
+CASE 
+WHEN $scale < 750 THEN 31.36
+WHEN $scale >= 750 AND $scale < 1250 THEN 16
+WHEN $scale >= 1250 AND $scale < 3000 THEN 7.84
+WHEN $scale >= 3000 THEN 4
+END
+
+
+EO:
+---
+
+gestrichelt2:
+
+CASE 
+WHEN $scale < 750 THEN '1.4;1.0'
+WHEN $scale >= 750 AND $scale < 1250 THEN '1.0;0.7'
+WHEN $scale >= 1250 AND $scale < 3000 THEN '0.7;0.5'
+WHEN $scale >= 3000 THEN '0.5;0.34'
+END
+
+
+punktiert:
+
+CASE 
+WHEN $scale < 750 THEN '0.7;0.7'
+WHEN $scale >= 750 AND $scale < 1250 THEN '0.5;0.5'
+WHEN $scale >= 1250 AND $scale < 3000 THEN '0.35;0.35'
+WHEN $scale >= 3000 THEN '0.25;0.25'
+END
+
+strichpunktiert1:
+
+CASE 
+WHEN $scale < 750 THEN '9.1;1.4;1.4;1.4;1.4;1.4'
+WHEN $scale >= 750 AND $scale < 1250 THEN '6.5;1;1;1;1;1'
+WHEN $scale >= 1250 AND $scale < 3000 THEN '4.5;0.7;0.7;0.7;0.7;0.7'
+WHEN $scale >= 3000 THEN '3.2;0.5;0.5;0.5;0.5;0.5'
+END
+
+strichpunktiert2:
+
+CASE 
+WHEN $scale < 750 THEN '14;1.4;2.52;1.4'
+WHEN $scale >= 750 AND $scale < 1250 THEN '10;1;1.8;1'
+WHEN $scale >= 1250 AND $scale < 3000 THEN '7;0.7;1.26;0.7'
+WHEN $scale >= 3000 THEN '5;0.5;0.9;0.5'
+END
+
+
+Proj BB:
+---------
+
+CASE 
+WHEN $scale < 750 THEN '3.5;1.0'
+WHEN $scale >= 750 AND $scale < 1250 THEN '2.5;0.7'
+WHEN $scale >= 1250 AND $scale < 3000 THEN '1.75;0.5'
+WHEN $scale >= 3000 THEN '1.2;0.34'
+END
 
 
 BB ausgezogen schwarz:
