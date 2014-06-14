@@ -1,16 +1,33 @@
-qgis_mopublic_styles
-====================
+QGIS Styles (QML) für MOpublic AV-Daten 
+=======================================
 
-QGIS 2.4 styles for MOpublic layers
+Voraussetzungen
+---------------
+* QGIS 2.4
+* Zum Anzeigen der Testprojekte muss mindestens GDAL/OGR 1.11 vorhanden sein.
+
+SVG
+---
+Im Ordner *svg/grundbuchplan* sind SVG-Dateien, die zum Darstellen verschiedener Objekte benötigt werden. Der Ordner *grundbuchplan* ist in das Installationsverzeichnis zu kopieren. Beispiel: `/home/stefan/Apps/qgis_master/share/qgis/svg/`. Es besteht die Möglichkeit den Ordner irgendwo anders hinzukopieren und den Pfad unter `Options` - `System` - `SVG Paths` hinzuzufügen. 
+
+Fonts
+-----
+Es wird der Cadastra-Font benötigt. Unter Ubuntu wie folgt installieren:
+ 
+```
+cd /usr/share/fonts/truetype
+cp /path/to/fonts/*.ttf .
+sudo fc-cache -f -v
+```
 
 
-svg
+QML
+---
+Es fehlen QML-Dateien für die Layer *bodenbedeckung__projbbtext* und *hoheitsgrenzen__projgemeindegrenze*. Für die unterirdischen Gebäude wurde ein separates QML erstellt. Ebenso für die farbigen QML (*..._farbe*).
 
-projbbtext und projgemeindegrenze fehlen
+Im QGIS-Projekt sind die Layer topicweise geordnet. Gezeichnet werden sie aber nicht in dieser Reihenfolge, sonst würde z.B. Grenzpunkte unter den Hoheitsgrenzen liegen.
 
-sql where bedingung
+Bis auf die Gemeindegrenzen und die Bezirksgrenzen werden die Daten nur bis > 1:6000 gezeichnet.
 
-eo-flaechenelement doppelt (da die unterirdischen gebäude unter der beodenbedckung zu liegen kommt)
+Bei einzelnen Layer (z.B. *einzelobjekte__flaechenelement_unterirdisch*) ist es sinnvoll in den Layereigenschaften unter  `General` - `Feature subset` die Auswahl einzuschränken (z.B. *"art" IN ('Reservoir', 'unterirdisches_Gebaeude')*).
 
-
-1:6000 sonst nur gemeindegrenzen und bezirksgrenzen
