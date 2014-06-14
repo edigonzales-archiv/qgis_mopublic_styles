@@ -4,7 +4,7 @@ QGIS Styles (QML) für MOpublic AV-Daten
 Voraussetzungen
 ---------------
 * QGIS 2.4
-* Zum Anzeigen der Testprojekte muss mindestens GDAL/OGR 1.11 vorhanden sein.
+* Zum Anzeigen der Testprojekte muss mindestens GDAL/OGR 1.11 installiert sein.
 
 SVG
 ---
@@ -19,7 +19,6 @@ cd /usr/share/fonts/truetype
 cp /path/to/fonts/*.ttf .
 sudo fc-cache -f -v
 ```
-
 
 QML
 ---
